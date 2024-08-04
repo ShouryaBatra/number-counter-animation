@@ -24,8 +24,17 @@ const createOdometer = (el, value) => {
   observer.observe(el);
 };
 
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;   
+
+}
+
+
 const firstNumberOdometer = document.querySelector(".first-number");
-createOdometer(firstNumberOdometer, 50);
+createOdometer(firstNumberOdometer, getRandomInt(0, 10000000));
 
 const secondNumberOdometer = document.querySelector(".second-number");
 createOdometer(secondNumberOdometer, 489234);
